@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar'
 import { Home } from './pages/Home'
 import { Create } from './pages/Create'
 import { BlogDetails } from './pages/BlogDetails'
+import { NotFount } from './components/NotFount'
 
 function App() {
   const router = createBrowserRouter(
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path='/create' element={<Create/>}/>
         <Route path='/blogs/:id' element={<BlogDetails/>}/>
+        <Route path='/*' element={<NotFount/>}/>
       </Route>
     )
   )
